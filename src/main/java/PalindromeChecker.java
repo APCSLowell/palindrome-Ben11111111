@@ -8,7 +8,7 @@ public void tester()
   //String lines[] = loadStrings("palindromes.txt");
   String[] lines = new String[6]; 
     try{
-        File myFile = new File("palindromes.txt");
+        File myFile ={"test","rotator","rewriter","nurses","Madam, I'm Adam!","A Man! A Plan! A Canal! Panama!"};
         Scanner myReader = new Scanner(myFile);
         int counter = 0;
         while (myReader.hasNextLine()) {
@@ -35,15 +35,24 @@ public void tester()
     }
   }
 }
-public boolean palindrome(String word)
-{
-  //your code here
-  return false;
+public boolean palindrome(String word){
+ String temp = new String();
+  for (int i = 0; i < word.length(); i++) {
+    char c = word.charAt(i);
+    if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9')) {
+      temp += Character.toLowerCase(c);
+    }
+  }
+  return temp.equals(reverse(temp));
 }
 public String reverse(String str)
 {
-    String sNew = new String();
-    //your code here
+     String sNew = new String();
+  for (int i = str.length() - 1; i >= 0; i--) {
+  char c = str.charAt(i);
+   if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9')) {
+      sNew += Character.toLowerCase(c);
+    }
+  }
     return sNew;
-}
 }
