@@ -8,7 +8,7 @@ public void tester()
   //String lines[] = loadStrings("palindromes.txt");
   String[] lines = new String[6]; 
     try{
-        File myFile = loadStrings("palindromes.txt");
+        File myFile = new File("palindromes.txt");
         Scanner myReader = new Scanner(myFile);
         int counter = 0;
         while (myReader.hasNextLine()) {
