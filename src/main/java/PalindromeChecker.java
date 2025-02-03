@@ -36,7 +36,7 @@ public void tester()
   }
 }
 public boolean palindrome(String word){
- String temp = new String();
+  String temp = new String();
   for (int i = 0; i < word.length(); i++) {
     char c = word.charAt(i);
     if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9')) {
@@ -45,14 +45,15 @@ public boolean palindrome(String word){
   }
   return temp.equals(reverse(temp));
 }
+
 public String reverse(String str)
-{
-     String sNew = new String();
+ {
+  String sNew = new String();
   for (int i = str.length() - 1; i >= 0; i--) {
-  char c = str.charAt(i);
-   if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9')) {
+    char c = str.charAt(i);
+    if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9')) {
       sNew += Character.toLowerCase(c);
-    }
+       }
   }
-    return sNew;
+  return sNew;
 }
